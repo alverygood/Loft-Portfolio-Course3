@@ -1,0 +1,17 @@
+.menu {
+    display: flex;
+    color: #fff;
+    padding: 30px;
+    border-bottom: 1px solid #555b5e;
+}
+
+.menu__list {
+    display: flex;
+}
+
+.menu__link {
+    padding-left: 40px;
+    color: #fff;
+    flex-direction: row;
+    text-decoration: none;
+}

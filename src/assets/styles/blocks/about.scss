@@ -1,0 +1,55 @@
+.about {
+  display: flex;
+  clip-path: polygon(0 0,100% 10%,100% 100%,0 100%);
+}
+
+.about__left {
+  position: relative;
+  text-align: center;
+  width: 50%;
+  //background: url("assets/images/icons/about_bg_left.svg");
+  background: #efeee9;
+  //clip-path: polygon(0 0,100% 10%,100% 100%,0 100%);
+}
+
+#my_triangle-left {
+  -webkit-clip-path: polygon(187px 286px,735px 302px,190px 149px);
+  fill: #efeee9;
+}
+.about__right {
+  text-align: center;
+  width: 50%;
+  background-color: #eeebdf;
+  //clip-path: polygon(0 0,100% 10%,100% 100%,0 100%);
+}
+
+.skills-row__title {
+  margin: 40px;
+  font-size: 28px;
+  font-family: "Roboto";
+  color: rgb(69, 90, 100);
+  line-height: 1.143;
+  display: flex;
+}
+
+.skills-row__list {
+  display: flex;
+  flex-direction: row;
+}
+
+.skills-list__item {
+}
+
+.user-description__text {
+  margin: 20px;
+  text-align: left;
+}
+
+.about__right-content {
+  display: flex;
+  flex-direction: row;
+}
+
+.skill__title {
+    margin-bottom: 30px;
+}

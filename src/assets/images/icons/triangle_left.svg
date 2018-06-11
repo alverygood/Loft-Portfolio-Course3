@@ -1,0 +1,5 @@
+<svg viewBox="0 0 500 270" height="270">
+    <title>Треугольник</title>
+    <desc>Тут нарисован зеленый треугольник</desc>
+        <polygon points="5,265 5,115 495,265" fill="blue"/>
+</svg>

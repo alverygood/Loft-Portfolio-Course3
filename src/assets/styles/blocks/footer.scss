@@ -1,0 +1,27 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.footer__row {
+  display: flex;
+  font-size: 15.771px;
+  font-family: "Roboto";
+  color: rgba(255, 255, 255, 0.502);
+  line-height: 1.502;
+}
+
+.footer__col {
+  width: 50%;
+  padding: 10px;
+}
+
+.footer__col_justify_end {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.socials__item {
+    list-style-type: none;
+}
