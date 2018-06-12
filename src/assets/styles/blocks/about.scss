@@ -1,6 +1,6 @@
 .about {
   display: flex;
-  clip-path: polygon(0 0,100% 10%,100% 100%,0 100%);
+  //clip-path: polygon(0 0,100% 10%,100% 100%,0 100%);
 }
 
 .about__left {
@@ -9,18 +9,20 @@
   width: 50%;
   //background: url("assets/images/icons/about_bg_left.svg");
   background: #efeee9;
-  //clip-path: polygon(0 0,100% 10%,100% 100%,0 100%);
+  clip-path: polygon(0 0,100% 10%,100% 100%,0 100%);
+  
 }
 
 #my_triangle-left {
-  -webkit-clip-path: polygon(187px 286px,735px 302px,190px 149px);
+  //-webkit-clip-path: polygon(187px 286px,735px 302px,190px 149px);
   fill: #efeee9;
 }
 .about__right {
   text-align: center;
   width: 50%;
   background-color: #eeebdf;
-  //clip-path: polygon(0 0,100% 10%,100% 100%,0 100%);
+  clip-path: polygon(0 10%,100% 0%,100% 100%,0 100%);
+  
 }
 
 .skills-row__title {
