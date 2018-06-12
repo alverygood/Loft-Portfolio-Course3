@@ -1,0 +1,46 @@
+extends ../main.layout.pug
+
+block variables
+  - var title = 'Обо мне'
+
+block scripts
+  script(src='about.bundle.js')
+
+block content
+  section.blog
+    .hero__links
+      ul.socials
+        each item in ['vk', 'github', 'in']
+          li.socials__item
+            a(href="#").socials__link
+              +icon(item, 'socials__link-icon')
+    .hero__menu
+      a(href="assets/images/icons/sprite.svg#hamburger").hamburger
+
+    .hero__title
+      .section-title
+        img(src="assets/images/sections/hero/portfolio_header.png", alt="name-site").section-title__pic
+      
+      .user.hero__user
+        .user__pic
+          img(src="assets/images/sections/hero/men.png", alt="handsome-men").user__pic-img
+        .user__description
+          .user__name Владимир Астахов
+          .user__info Личный сайт веб разрабочика
+
+    
+    a(href="assets/images/icons/sprite.svg#arrow_down").down-btn.hero__down-btns
+
+    section.blog__content
+        .blog__content-left
+            ul.name__articles
+                each item in [
+                    'Самое важное в SASS',
+                    'Хитрые приемы в верстке',
+                    'Необходимые плагины в Gulp',
+                    'Почему я выбрал Jade'
+                ]
+                    li.atrticles__item
+                        a(href="#").articles__link 
+        .blog__content-right
+    
