@@ -10,4 +10,66 @@
     clip-path: polygon(100% 0, 100% 88%, 50% 100%, 0 89%, 0 0);
   }
 
+.blog__title {
+  font-family: 'bernier';
+  color: #fff;
+  font-size: 75px;
+}
+
+.blog__content {
+  display: flex;
+}
+
+.blog__left {
+  width: 40%;
+  padding: 5%;
+}
+
+.blog__item {
+  margin-bottom: 40px;
+    font-size: 16px;
+    font-family: "Roboto";
+    color: #455a64;
+    font-weight: bold;
+    line-height: 1.625;
+    text-align: right;
+
+    &:hover {
+      color: rgb(0, 191, 165);
+    }
+}
+
+.blog__list {
+  padding-bottom: 20px;
+}
+
+.blog_item--link {
+  text-decoration: none;
+}
+
+.blog__right {
+  width: 60%;
+  padding: 5%;
+}
+
+.blog__right--header {
+  font-size: 35px;
+  font-family: 'bernier';
+  color: rgb(69, 90, 100);
+  line-height: 1.171;
+  text-align: left;
+}
+
+.blog__right--content {
+  margin-bottom: 20px;
+}
+
+.date {
+    font-size: 16px;
+    font-family: "Roboto";
+    color: rgba(0, 191, 165, 0.702);
+    line-height: 2.563;
+    text-align: left;
+}
+
   

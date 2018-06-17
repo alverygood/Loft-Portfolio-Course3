@@ -8,6 +8,7 @@ block scripts
 
 block content
   section.hero
+    .hero__wrapper
     .hero__links
       ul.socials
         each item in ['vk', 'github', 'in']
@@ -15,7 +16,7 @@ block content
             a(href="#").socials__link
               +icon(item, 'socials__link-icon')
     .hero__menu
-      a(href="assets/images/icons/sprite.svg#hamburger").hamburger
+      a(href="assets/images/hamburger-menu.svg#hamburger-menu").hamburger
 
     .hero__title
       .section-title
@@ -71,25 +72,31 @@ block content
             ul.skills-row__list
               each skill in skillsrow[1]
                 li.skills-row-item
-                  svg.skill
-                  .skill__title #{skill[0]}
+                  figure.skill(data-precence="70")
+                    svg(viewBox="0 0 100 100" preservAspectRatio="none").skill_figure
+                      circle(cx="50" cy="50" r="40").skill__circle.skill__circle_under
+                      circle(cx="50" cy="50" r="40").skill__circle.skill__circle_above
+                    .skill__title #{skill[0]}
   section.map
     #map
-    .map__data
-      h2.contacts__tittle
-        .block-subtitle Контакты
-      address.contacts__data
-        ul.contacts__list
-          -
-            var contacts = [
-              ['skype', 'yam'],
-              ['envelope', 'yam230@'],
-              ['phone', '+7931-579-99-54']
-            ]
-          each item in contacts 
-            li.contacts__item.contacts-row
-              .contacts-row.contacts__icon
-                +icon(`../${item[0]}`, 'contacts__icon-img')
-              .contacts__title #{item[1]}
-
-
+      .map__data
+        h2.contacts__tittle
+          .block-subtitle Контакты
+        address.contacts__data
+         ul.contacts__list
+          li.contacts__list-row
+            svg.list-row--icons
+              use.contacts__icon-img(xlink:href="../assets/images/skype.svg#skype" width="25px" height="25px")
+            .list-row--describe yam
+          li.contacts__list-row
+            svg.list-row--icons
+              use.contacts__icon-img(xlink:href="../assets/images/message.svg#message" width="25px" height="25px")
+            .list-row--describe yamov230@gmail.com
+          li.contacts__list-row
+            svg.list-row--icons
+              use.contacts__icon-img(xlink:href="../assets/images/phone_contacts.svg#phone_contacts" width="25px" height="25px")
+            .list-row--describe +7931-579-96-45
+          li.contacts__list-row
+            svg.list-row--icons
+              use.contacts__icon-img(xlink:href="../assets/images/map-marker.svg#map-marker" width="30px" height="30px")
+            .list-row--describe ул. Проспект Славы
