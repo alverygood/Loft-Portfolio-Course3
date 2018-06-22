@@ -1,0 +1,88 @@
+extends ../main.layout.pug
+
+block variables
+  - var title = 'Мои работы'
+
+block scripts
+  script(src='about.bundle.js')
+
+block content
+  section.hero.working__bg-img
+    .hero__wrapper
+    .hero__links
+      ul.socials
+        each item in ['vk', 'github', 'in']
+          li.socials__item
+            a(href="#").socials__link
+              +icon(item, 'socials__link-icon')
+    .hero__menu
+      a(href="assets/images/hamburger-menu.svg#hamburger-menu").hamburger
+
+    .hero__title
+      .section-title
+        img(src="assets/images/sections/hero/portfolio_header.png", alt="name-site").section-title__pic
+      
+      .user.hero__user
+        .user__pic
+          img(src="assets/images/sections/hero/men.png", alt="handsome-men").user__pic-img
+        .user__description
+          .user__name Владимир Астахов
+          .user__info Личный сайт веб разрабочика
+
+    
+    a(href="assets/images/icons/sprite.svg#arrow_down").down-btn.hero__down-btns
+
+  section.my__works
+      .my__works--box
+          h1.my__header <span class="working-slider__span"> &#045;</span> Мои работы <span class="working-slider__span"> &#045;</span>
+  section.working-slider.slider.js-slider
+    .working-slider__left
+      .working-slider__left-container.slider__description.js-description
+        h2.working-slider__header <span class="working-slider__span"> &#045;</span> Сайт школы онлайн <span class="working-slider__span">&#045;</span>Образования
+        .working-slider__about HTML , CSS, JAVASCRIPT
+        a(href="assets/images/link.svg#link").working-slider__btn Посмотреть сайт
+    .working-slider__right
+      .working-slider__right-container.slider__main-slide.js-main-slide
+        .working-slider__right-img
+          img(src="assets/images/sections/works/work-0.png")
+        .working-slider__button
+          .working-slider__btn-left.slider__up-slide.js-scroll-up
+            img(src="/assets/images/sections/works/work-1.png")
+            svg.working-slider__btn-svg
+              use(xlink:href='/assets/images/arrow-down.svg#arrow-down')
+          .working-slider__btn-right.slider__down-slide.js-scroll-down
+            img(src="/assets/images/sections/works/work-2.png")
+            svg.working-slider__btn-svg
+              use(xlink:href='/assets/images/up-arrow.svg#up-arrow')
+  section.about-me
+    .about-me__box <span class="working-slider__span"> &#045;</span> Что обо мне <span class="working-slider__span"> &#045;</span> <br>говорят
+    .about-me__content
+      .about-me__content-left
+        svg.about-me__content-quotes
+          use(xlink:href='/assets/images/left-quotes.svg#left-quotes')
+        p.about-me__content-text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+        .about-me__content-teachers
+          img(src="/assets/images/sections/about__me/dmitry.png").about-me__avatar
+          .about-me__avatar-person
+            p.about-me__avatar-name Ковальчук Дмитрий
+            span.about-me__avatar-profession основатель Loftschool
+      .about-me__content-left
+        svg.about-me__content-quotes
+          use(xlink:href='/assets/images/left-quotes.svg#left-quotes')
+        p.about-me__content-text Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
+        .about-me__content-teachers
+          img(src="/assets/images/sections/about__me/vlad.png").about-me__avatar
+          .about-me__avatar-person
+            p.about-me__avatar-name Владимир Сабанцев
+            span.about-me__avatar-profession преподаватель
+    .about-me__form-order
+      form.about-me__my-form(action="/action_page.php")
+        h2.working-slider__header.about-me__form-head <span class="working-slider__span"> &#045;</span> Сайт школы онлайн <span class="working-slider__span">&#045;</span>
+        input(type="text" name="firstname" value="Имя" class="input")
+        input(type="text" name="lastname" value="email" class="input")
+        input(type="textarea" name="textarea" value="ваше сообщени" class="input")
+        .about-me__buttons
+          button(type="submit" value="Отправить").about-me__button-left Отправить
+          button(type="submit" value="Очистить" class="about-me__button-right").about-me__button-right  Очистить
+
+

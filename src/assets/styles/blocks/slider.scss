@@ -1,0 +1,29 @@
+.slider {
+    font-size: 0;
+    &__main-slide {
+        height: 200px;
+        width: 400px;
+        font-size: 26px;
+        background: url("assets/images/sections/works/work-0.png");
+    }
+
+    &__up-slide {
+        height: 100px;
+        width: 200px;
+        display: inline-block;
+        font-size: 26px;
+        background: url("/assets/images/sections/works/work-1.png");
+    }
+
+    &__down-slide {
+        height: 100px;
+        width: 200px;
+        font-size: 26px;
+        background: url("/assets/images/sections/works/work-2.png");
+        display: inline-block;
+    }
+
+    &__description {
+        font-size: 26px;
+    }
+}
